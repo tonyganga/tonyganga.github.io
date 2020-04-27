@@ -1,0 +1,1015 @@
+
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Tony Ganga</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    color: #40484f;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.46153846;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+}
+
+p {
+    display: block;
+    margin-bottom: 1.3em;
+}
+
+a {
+    color: #0095ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0c65a5;
+    text-decoration: underline;
+}
+
+ul {
+    margin-top: 1rem;
+}
+
+li {
+    list-style-type: square;
+    list-style-position: outside;
+    margin-left: 1.3em;
+}
+
+.highlights>li>p {
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.67rem;
+}
+
+h3 {
+    font-size: 1.27rem;
+}
+
+em {
+    color: #757575;
+}
+
+blockquote {
+    margin-bottom: 1em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+/* main container */
+
+#resume {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+/* every section wrapper */
+
+.section {
+    margin-bottom: 1rem;
+}
+
+section .location {
+    margin-right: .5em;
+    color: #606d76;
+    font-weight: 700;
+}
+
+#contact {
+    margin-top: .5rem;
+}
+
+#profiles .item {
+    padding: 0;
+}
+
+#header>#profiles,
+#header>#contact,
+#skills,
+#languages,
+#interests {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+#header>div {
+    line-height: 1.5;
+}
+
+#header>div>div {
+    margin-right: 1.2em;
+}
+
+#header h1.name {
+    font-size: 2.8rem;
+    font-weight: 100;
+    line-height: 100%;
+}
+
+#header h2.label {
+    color: #202931;
+    font-size: 1.47rem;
+    font-weight: 300;
+}
+
+#header .picture {
+    width: 11em;
+    float: right;
+    border-radius: 4px;
+}
+
+.main-summary {
+    background: #f1f8ff;
+    padding: 1.2em 1em;
+    margin-top: 1rem;
+}
+
+.main-summary p {
+    margin: .15em 0 0;
+}
+
+h2.section-title {
+    display: inline-block;
+    background: #fff;
+    padding: 0 1em 0.3em 0;
+    color: #ff6d1f;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    font-size: .9rem;
+}
+
+.section>header {
+    position: relative;
+}
+
+.fa {
+    margin-right: 0.25em;
+}
+
+.section>header::after {
+    position: absolute;
+    left: 0;
+    top: .7em;
+    height: 1px;
+    background: #ccc;
+    content: "";
+    width: 100%;
+    z-index: -100;
+    display: block;
+}
+
+.section.main-summary>section {
+    margin: 0;
+}
+
+.section>section>header {
+    font-size: 1.38rem;
+    position: relative;
+    margin-top: .7em;
+}
+
+.section>section>header:first-of-type {
+    margin: 0;
+}
+
+.section>section>header .space-left {
+    position: absolute;
+    left: -1.56rem;
+    top: 5px;
+    color: #aaa;
+    line-height: 1;
+    opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+    display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+    font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+    content: "at "
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+    color: #606d76;
+    font-weight: 400;
+}
+
+.section header .date {
+    font-size: 1rem;
+    display: inline-table;
+    padding: .1em 0;
+    font-weight: 600;
+}
+
+ul.keywords,
+ul.courses {
+    margin-top: .5em;
+}
+
+ul.keywords li,
+ul.courses li {
+    display: inline-block;
+    margin: 2px 2px 2px 0;
+    padding: 4px 5px 5px;
+    font-size: .9rem;
+    line-height: 1;
+    text-transform: lowercase;
+    color: #3e6d8e;
+    background-color: #dfeaf1;
+    border: 0 solid #dfeaf1;
+    white-space: nowrap;
+}
+
+ul.keywords li:hover,
+ul.courses li:hover {
+    background: #dfeaf0;
+}
+
+.item {
+    padding: .5em 0;
+}
+
+.gpa {
+    padding-bottom: .5em;
+}
+
+.fa.social {
+    font-size: 1.1em;
+}
+
+
+/* Social Media Brand Colors */
+
+.google-plus {
+    color: #dd4b39;
+}
+
+.tumblr {
+    color: #32506d;
+}
+
+.foursquare {
+    color: #0072b1;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.linkedin {
+    color: #007bb6;
+}
+
+.pinterest {
+    color: #cb2027;
+}
+
+.dribbble {
+    color: #ea4c89;
+}
+
+.instagram {
+    color: #517fa4;
+}
+
+.twitter {
+    color: #00aced;
+}
+
+.soundcloud {
+    color: #ff3a00;
+}
+
+.wordpress {
+    color: #21759b;
+}
+
+.youtube {
+    color: #bb0000;
+}
+
+.github {
+    color: #171515;
+}
+
+.stack-overflow {
+    color: #828386;
+    position: relative;
+}
+
+.flickr {
+    color: #ff0084;
+}
+
+.stack-overflow::after {
+    position: absolute;
+    left: 0;
+    content: '\f16c';
+    color: #f68a1f;
+    overflow: hidden;
+    height: 100%;
+}
+
+.telegram {
+    color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+    width: 15em;
+    padding: 0 .5em .5em 0;
+    border-bottom: none;
+}
+
+#skills .item {
+    width: 16em;
+}
+
+#skills .item .keywords {
+    width: 15em;
+}
+
+
+/* Skill chart */
+
+.level {
+    margin-bottom: .5em;
+}
+
+.level .bar {
+    border: 1px solid #ddd;
+    display: block;
+    width: 10em;
+    height: 5px;
+    position: relative;
+}
+
+.level .bar::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    background: black;
+    height: 5px;
+}
+
+.level.beginner .bar::after {
+    background: #EB5F51;
+    width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+    background: #ffdf1f;
+    width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+    background: #5CB85C;
+    width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+    background: #59C596;
+    width: 10em;
+}
+
+#references .item {
+    padding-left: .5em;
+    border-left: 5px solid #ff6d1f;
+}
+
+.toggle-item {
+  visibility: hidden;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.display {
+    display: block;
+    opacity: 1 !important;
+}
+
+.margin1 {
+    margin-bottom: .5rem;
+}
+
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+    #resume {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+    li {
+        margin-left: 1.5em;
+    }
+    #resume {
+        width: 820px;
+        margin: 2rem auto;      
+    }
+    .section>section>header .space-left {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .section>section {
+        margin-left: 1.67rem;
+    }
+    .toggle-item {
+        transform: translate(-9999px);
+    }
+    .toggle-item+label {
+        display: block;
+        margin-top: -16px;
+    }
+    .toggle-item:checked+label:after {
+        content: '\f0d7';
+    }
+    .toggle-item+label:after {
+        float: left;
+        cursor: pointer;
+        margin-left: -20px;
+        color: #aaa;
+        font-size: 16px;
+        content: '\f0da';
+        font-family: Fontawesome;
+    }
+    .toggle-item~.item {
+        height: 0;
+        opacity: 0;
+    }
+    .toggle-item:checked~.item {
+        height: auto;
+        opacity: 1;
+        transition: all .5s linear;
+    }
+    .company::before,
+    .institution::before,
+    .organization::before,
+    .awarder::before {
+        content: "| ";
+    }
+    .header-left {
+        float: left;
+        width: 70%;
+        word-break: normal;
+    }
+    .section header .date {
+        float: right;
+        padding: .2em;
+    }
+    .display {
+        display: none;
+    }
+    .display:not(.none) {
+        display: block;
+    }
+}
+
+@media print {
+    #resume {
+        margin: 0;
+        padding: 0;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        line-height: 1.3;
+        /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
+    }
+    @page {
+        margin: 1cm 1.4cm;
+    }
+    .item-count {
+        display: none;
+    }
+    .company::before,
+    .institution::before,
+    .organization::before,
+    .awarder::before {
+        content: "at ";
+    }
+    .main-summary {
+        padding: 2rem 0;
+    }
+    .section {
+        margin: .8rem 0;
+        padding: 0;
+    }
+    .section header {
+        padding-bottom: .15rem;
+    }
+    .section .location {
+        padding-bottom: .15rem;
+    }
+    .stack-overflow::after {
+        content: "";
+    }
+    .fa.social {
+        color: #828386;
+    }
+    ul {
+        margin-top: .4em;
+    }
+    ul,
+    li {
+        padding: 0;
+    }
+    ul.keywords li,
+    ul.courses li {
+        margin: 0;
+        padding: 0;
+        font-size: .8rem;
+        text-transform: lowercase;
+    }
+    ul.keywords li::after,
+    ul.courses li::after {
+        padding: 0 0 0 .1rem;
+        content: " |";
+    }
+    ul.keywords::before,
+    ul.courses::before {
+        font-size: .8rem;
+        font-weight: 600;
+    }
+    ul.keywords::before {
+        content: "Skills acquired: ";
+    }
+    #skills .keywords::before {
+        content: '';
+    }
+    .section p {
+        margin: 0;
+        padding: 0;
+    }
+    ul.courses::before {
+        content: "Major courses: ";
+    }
+    ul.keywords li:last-of-type::after,
+    ul.courses li:last-of-type::after {
+        content: "";
+    }
+    .level em {
+        font-style: normal;
+        padding: .1em 0;
+    }
+    .level .bar {
+        display: none;
+    }
+    #profiles .item {
+        padding: 0;
+    }
+    .item.display {
+        display: block;
+        opacity: 1 !important;
+    }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Tony Ganga</h1>
+    			<h2 class="label">Site Reliability Engineer</h2>
+    		</div>
+    		
+    		<span class="location">
+    			<span class="city">Fort Lauderdale,</span> 
+    			<span class="region">Florida</span> 
+    			<span class="countryCode">US</span> 
+    		</span>
+    		
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="fa fa-envelope-o"></span>
+    				<a href="mailto:anthonyganga@gmail.com">anthonyganga@gmail.com</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fa fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/tonyganga">tonyganga</a>
+    					</span> 
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section main-summary">
+    		<section>
+    			<div><p>I'm a Site Reliability Engineer who applies software engineering practices to infrastructure. I'm a self taught programmer and come from a sysadmin background. I've worked mostly in startups and live for the challenges they bring. I live in your codebase and love error handling, structured logging and tracing.</p></div>
+    		</section>
+    	</section>
+    
+    <section class="section margin1">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Tooling
+    			</h3>
+    			 
+    			<div class="level master">
+    				<em>Master</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Golang</li>
+    				<li>Ansible</li>
+    				<li>Terraform</li>
+    				<li>Helm</li>
+    				<li>Gitlab</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				OpenSource
+    			</h3>
+    			 
+    			<div class="level master">
+    				<em>Master</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>HAProxy</li>
+    				<li>Kuberentes</li>
+    				<li>gRPC</li>
+    				<li>Istio</li>
+    				<li>Kafka</li>
+    				<li>Postgres</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(5)</span></h2>
+      </header>
+    
+      <section id="work">
+        <section class="work-item">
+    
+            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            <label for="work-item-0"></label>
+    
+    			<header>
+    				<div class="position">Senior Site Reliability Engineer</div>
+    				<div class="company">MagicLeap</div>
+    				<div class="date">
+    				  <span class="startDate">October 2019</span> 
+    					<span class="endDate">- Current</span>
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="https://www.magicleap.com/en-us">https://www.magicleap.com/en-us</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>MagicLeap is a mixed reality startup unicorn. I'm an embedded SRE on the Identity team with a focus around evangelizing tooling that makes developers lives easier. I spend most of my day helping architect and design the new Identity system that all services interact with at MagicLeap.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Maintained Golang CLI that wrapped Terraform and AWS/GCP deployments</p></li>
+                <li><p>Maintained Golang libraries that application teams consumed for logging, error handling and metrics.</p></li>
+                <li><p>Maintained 100+ Terraform modules and 20+ Terraform provider forks.</p></li>
+                <li><p>Embedded SRE on the Identity (AuthZ/N) team tasked with untangling and modernizing their AWS footprint.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-1" type="checkbox" class="toggle-item" />
+            <label for="work-item-1"></label>
+    
+    			<header>
+    				<div class="position">Software Engineer, Site Reliability</div>
+    				<div class="company">American Express</div>
+    				<div class="date">
+    				  <span class="startDate">November 2018</span> 
+    					<span class="endDate">- October 2019</span> 
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="https://www.americanexpress.com/">https://www.americanexpress.com/</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>At American Express I was brought on as an SRE with a focus on tooling. I was embedded within the business vertical that was responsible for Fraud. I was able to identify problems that developers faced on a daily basis and contribute back to the innersource community internally to patch what I found. I contributed and maintained to a Golang CLI that made the DX of releasing software manageable around the red tape. I also spent most of my time writing software to shine some light on infrastructure problems with no previous visibility.</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Maintained Golang CLI that deployed into our OpenShift environments.</p></li>
+                <li><p>Maintained Golang logging library for SRE team.</p></li>
+                <li><p>Reduced production Docker images sizes across all technology stacks by 50%</p></li>
+                <li><p>Wrote Prometheus exporters to gain visibility into multiple areas of the infrastructure.</p></li>
+                <li><p>Instructed `Introduction to Python` course for company upskilling initiatives.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-2" type="checkbox" class="toggle-item" />
+            <label for="work-item-2"></label>
+    
+    			<header>
+    				<div class="position">Senior Site Reliability Engineer</div>
+    				<div class="company">Chewy.com</div>
+    				<div class="date">
+    				  <span class="startDate">November 2017</span> 
+    					<span class="endDate">- November 2018</span> 
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="https://www.chewy.com/">https://www.chewy.com/</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>I joined Chewy when it was still in it's startup stage. I was apart of the core SRE team and was responsible for everything in the ecommerce environments. I maintained a few opensource technologies running on VMs in VMware, fully managed by Ansible, that made up the ecommerce environment. I became pretty well versed with HAProxy, Postgres, Redis and gRPC. I deployed the first of many Kubernetes clusters for the warehouse teams for their greenfield applications. I was later moved onto the Cloud Engineering team where we were tasked with setting up a footprint for deploying into AWS. I spent most of my time contributing to how our CI/CD pipelines would look in AWS and onboarding technology into the company (Datadog, Spinnaker).</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Brought TDD patterns to writing Ansible roles with Molecule.</p></li>
+                <li><p>Maintained 20+ Ansible roles and playbooks that managed deployments of the ecommerce stack</p></li>
+                <li><p>Implemented Netflix Spinnaker for Cloud based Kubernetes deployments.</p></li>
+                <li><p>Created a series a helm charts that developers could template and use to deploy their applications in Kubernetes.</p></li>
+                <li><p>Created Terraform modules to manage AWS onboarding.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-3" type="checkbox" class="toggle-item" />
+            <label for="work-item-3"></label>
+    
+    			<header>
+    				<div class="position">Senior DevOps Engineer</div>
+    				<div class="company">Matomy</div>
+    				<div class="date">
+    				  <span class="startDate">November 2016</span> 
+    					<span class="endDate">- November 2017</span> 
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="https://matomy.com/">https://matomy.com/</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>I joined a small team at Matomy as their first DevOps engineer on a small team. I worked remotely with the rest of the team located in Israel. This startup focused on creating a domain monetization platform. I was responsible for modernizing their infrastructure tooling using opensource technologies (CI/CD, metrics, logging etc).</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Deployed an ELK (Elasticsearch, Logstash, Kibana) stack that was used for application and infrastructure logging.</p></li>
+                <li><p>Deployed TIG (Telegraf/InfluxDB/Grafana) stack that was used for metrics from the infrastructure.</p></li>
+                <li><p>Deployed Kafka and worked with development teams to create an event driven architecture to migrate off their old legacy systems</p></li>
+                <li><p>Deployed and managed Kubernetes clusters in AWS/VMware to deploy greenfield applications</p></li>
+                <li><p>Created Ansible roles that deployed the above solutions and innersourced them with the team in Israel.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-4" type="checkbox" class="toggle-item" />
+            <label for="work-item-4"></label>
+    
+    			<header>
+    				<div class="position">DevOps Engineer</div>
+    				<div class="company">Ultimate Software</div>
+    				<div class="date">
+    				  <span class="startDate">June 2015</span> 
+    					<span class="endDate">- November 2016</span> 
+    				</div>
+    			</header>
+    			
+        	<span class="website">
+        		<a target="_blank" href="https://www.ultimatesoftware.com/">https://www.ultimatesoftware.com/</a>
+        	</span>      	<div class="item" id="work-item">
+            <div class="summary">
+              <p><p>I joined Ultimate Software as a DevOps engineer. This was my first job out of a traditional systems administration type of role. I worked on a team that focused on creating tooling for our sales team to consume and sell the core product, Ultipro. I served as a DevOps engineer on this project and architect/design/implemented a solution utilizing opensource components from our PaaS (OpenStack). I later moved onto a new company initiative to replace all of the logging infrastructure with an opensource solution (ELK).</p></p>
+            </div>
+            <ul class="highlights">
+                <li><p>Designed and implemented a solution that our sales team leveraged to give demos and training utilizing RabbitMQ, HAProxy and MongoDB.</p></li>
+                <li><p>Deployed and managed a series of large scale ELK stacks across four datacenters used for company wide logging.</p></li>
+                <li><p>Deployed and managed a TIG stack for time series metrics that application teams consumed.</p></li>
+                <li><p>Designed and implemented multiple CI/CD pipelines around utilities and tooling developers used for to iterate on the core UltiPro product.</p></li>
+                <li><p>Innersourced a previously locked down internal Bitbucket instance to enable developers to collaborate with each other and reuse code that solved previous problems.</p></li>
+            </ul>
+        	</div>
+        </section>
+      </section>
+    </section>
+
+  </body>
+</html>
+
