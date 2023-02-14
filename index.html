@@ -898,12 +898,12 @@
                 </p>
               </div>
               <ul class="highlights">
-                <li><p>Wrote a job scheduler in Go that performed health checks against various infrastructure API endpoints to determine if a component is operating correctly and attempted remediation steps if it wasn't.</p></li>
-                <li><p>Wrote a REST API in Go that enabled the Observability team to obtain information about an applications telemetry usage (number of logs by log level, cost of logs, number of custom metrics, etc).</p></li>
+                <li><p>Wrote a job scheduler in Golang that performed various tasks daily such as monitoring and correcting infrastructure health, crawling/updating APIs, loading data into Google BigQuery. </p></li>
+                <li><p>Wrote a REST API in Golang backed by Google BigQuery that enabled the Observability team to obtain information about an applications telemetry usage (volume, cost, utilization etc).</p></li>
                 <li><p>Wrote a Backstage plugin in Typescript and React to provide a view for the REST API above for software engineers to use as a tool to understand the cost of their telemetry data.</p></li>
-                <li><p>Wrote a gRPC API that communicated with our shared platform API that enabled our customers to perform Observability related operational tasks without needing to open up tickets to the operations teams.</p></li>
-                <li><p>Wrote a Kafka consumer that enriched metrics out of our telemetry pipeline to gain visibility into the amount of Observability signals we drop/receive.</p></li>
-                <li><p>Wrote a template configuration engine backed by Consul KV, GCS Buckets and notifications via GCP Pub/Sub to allow software engineers to dynamically configure their telemetry pipelines.</p></li>
+                <li><p>Wrote a gRPC API in Golang that enabled our customers to perform Observability related operational tasks without needing to open up tickets to the operations teams.</p></li>
+                <li><p>Wrote a Kafka consumer in Golang that enriched metrics out of our telemetry pipeline to gain visibility into the amount of signals we drop/receive.</p></li>
+                <li><p>Wrote a template configuration engine in Golang backed by Consul KV, GCS Buckets and notifications via GCP Pub/Sub to allow software engineers to dynamically configure their telemetry pipelines.</p></li>
               </ul>
             </div>
           </section>
@@ -930,8 +930,8 @@
               <ul class="highlights">
                 <li><p>Maintained Golang CLI that software teams used to wrap Terraform commands and deploy new resources to their AWS/GCP footprints.</p></li>
                 <li><p>Worked with Identity team to utilize Datadog APM for traces and use that trace data to get a better understanding of performance bottlenecks in the codebase.</p></li>
-                <li><p>Worked with Identity team to utilize Datadog for custom metrics to be used to create SLI for our ecosystem. This helped with creating SLA's for the rest of the organization and SLO for our team.</p></li>
-                <li><p>Worked closely with software engineers to identify SPOF/vulnerabilites in their ecosystem and work on solutions in the codebase or infra.</p></li>
+                <li><p>Worked with Identity team to utilize Datadog for custom metrics to create SLI for our ecosystem. This enabled a well defined SLA model for the rest of the organization and SLO for our team.</p></li>
+                <li><p>Worked to identify and harden SPOF/vulnerabilites in our ecosystem and work on solutions in the codebase.</p></li>
                 <li><p>Contributed new features/patched bugs in 20+ Terraform provider forks we maintained.</p></li>
               </ul>
             </div>
@@ -955,9 +955,8 @@
                 </p>
               </div>
               <ul class="highlights">
-                <li><p>Wrote a distributed job scheduler in Go backed by Redis to perform automated failovers for applications to validate their ability to failover into different datacenters with no downtime.</p></li>
+                <li><p>Wrote a distributed job scheduler in Golang backed by Redis to perform automated failovers for applications and validate their ability to failover into different datacenters with no downtime.</p></li>
                 <li><p>Wrote Prometheus exporters that scraped our Openshift environment to gain visibility into applications that had frequent crash loops and applied this towards an error budget.</p></li>
-                <li><p>Maintained and implemented Golang logging library, based on Uber's Zap, for SRE team.</p></li>
                 <li><p>Instructed an Introduction to Python course for the operations organization as a part of a company wide upskilling initiatives.</p></li>
                 <li><p>Mentored a team of 4 junior engineers, enabling them to utilize technologies like React/Go to solve problems in their verticals.</p></li>
               </ul>
